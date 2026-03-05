@@ -86,7 +86,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Button variant="secondary" fullWidth>
+                <Button variant="outline" fullWidth>
                   En savoir plus
                 </Button>
               </div>
@@ -180,9 +180,9 @@ export default function Home() {
               de vos revenus locatifs potentiels.
             </Paragraph>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="primary" size="lg">Estimer mes revenus</Button>
-              <Button variant="secondary" size="lg" leftIcon={<Phone />} asChild>
-                <a href="tel:+33745105564">07 45 10 55 64</a>
+              <Button variant="default" size="lg">Estimer mes revenus</Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="tel:+33745105564"><Phone /> 07 45 10 55 64</a>
               </Button>
             </div>
           </div>

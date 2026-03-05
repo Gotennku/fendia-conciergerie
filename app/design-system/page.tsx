@@ -17,7 +17,8 @@ export default function DesignSystemPage() {
           <div className="mb-8">
             <h3 className="text-lg font-medium mb-4 text-gray-600">Variants</h3>
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary">Primary</Button>
+              <Button variant="default">Default</Button>
+              <Button variant="outline">Outline</Button>
               <Button variant="secondary">Secondary</Button>
               <Button variant="ghost">Ghost</Button>
               <Button variant="link">Link</Button>
@@ -29,8 +30,9 @@ export default function DesignSystemPage() {
           <div className="mb-8">
             <h3 className="text-lg font-medium mb-4 text-gray-600">Sizes</h3>
             <div className="flex flex-wrap items-center gap-4">
+              <Button size="xs">Extra Small</Button>
               <Button size="sm">Small</Button>
-              <Button size="md">Medium</Button>
+              <Button size="default">Default</Button>
               <Button size="lg">Large</Button>
               <Button size="icon"><Phone /></Button>
             </div>
@@ -40,10 +42,10 @@ export default function DesignSystemPage() {
           <div className="mb-8">
             <h3 className="text-lg font-medium mb-4 text-gray-600">With Icons</h3>
             <div className="flex flex-wrap gap-4">
-              <Button leftIcon={<Phone />}>Appeler</Button>
-              <Button rightIcon={<ArrowRight />}>Continuer</Button>
-              <Button variant="secondary" leftIcon={<Mail />}>Contact</Button>
-              <Button variant="ghost" leftIcon={<Download />}>Télécharger</Button>
+              <Button><Phone /> Appeler</Button>
+              <Button>Continuer <ArrowRight /></Button>
+              <Button variant="outline"><Mail /> Contact</Button>
+              <Button variant="ghost"><Download /> Télécharger</Button>
             </div>
           </div>
 
@@ -53,7 +55,6 @@ export default function DesignSystemPage() {
             <div className="flex flex-wrap gap-4">
               <Button>Default</Button>
               <Button disabled>Disabled</Button>
-              <Button loading>Loading</Button>
             </div>
           </div>
 
@@ -61,18 +62,18 @@ export default function DesignSystemPage() {
           <div className="mb-8">
             <h3 className="text-lg font-medium mb-4 text-gray-600">Full Width</h3>
             <div className="max-w-md space-y-4">
-              <Button fullWidth>Full Width Primary</Button>
-              <Button variant="secondary" fullWidth>Full Width Secondary</Button>
+              <Button fullWidth>Full Width Default</Button>
+              <Button variant="outline" fullWidth>Full Width Outline</Button>
             </div>
           </div>
 
-          {/* Secondary Variants */}
+          {/* Outline Sizes */}
           <div className="mb-8">
-            <h3 className="text-lg font-medium mb-4 text-gray-600">Secondary + Sizes</h3>
+            <h3 className="text-lg font-medium mb-4 text-gray-600">Outline + Sizes</h3>
             <div className="flex flex-wrap items-center gap-4">
-              <Button variant="secondary" size="sm">Small</Button>
-              <Button variant="secondary" size="md">Medium</Button>
-              <Button variant="secondary" size="lg">Large</Button>
+              <Button variant="outline" size="sm">Small</Button>
+              <Button variant="outline" size="default">Default</Button>
+              <Button variant="outline" size="lg">Large</Button>
             </div>
           </div>
         </section>

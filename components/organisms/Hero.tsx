@@ -31,10 +31,10 @@ export function Hero() {
           </Lead>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button variant="primary" size="lg">
+            <Button variant="default" size="lg">
               Estimer mes revenus
             </Button>
-            <Button variant="secondary" size="lg">
+            <Button variant="outline" size="lg">
               Découvrir nos services
             </Button>
           </div>

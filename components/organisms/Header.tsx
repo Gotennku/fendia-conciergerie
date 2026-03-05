@@ -46,7 +46,7 @@ export function Header() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button variant="primary" size="sm">Estimer mes revenus</Button>
+            <Button variant="default" size="sm">Estimer mes revenus</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -78,7 +78,7 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Button variant="primary" fullWidth className="mt-4">Estimer mes revenus</Button>
+              <Button variant="default" fullWidth className="mt-4">Estimer mes revenus</Button>
             </div>
           </div>
         )}
