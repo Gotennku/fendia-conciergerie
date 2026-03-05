@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import { Container, H1, Lead, Button } from '@/components/atoms'
+import { Container, H1, Lead } from '@/components/atoms'
+import { Button } from '@/components/ui/button'
 
 export function Hero() {
   return (
@@ -30,27 +31,27 @@ export function Hero() {
           </Lead>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg">
+            <Button variant="primary" size="lg">
               Estimer mes revenus
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="secondary" size="lg">
               Découvrir nos services
             </Button>
           </div>
 
           {/* Trust indicators */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <div className="flex flex-wrap gap-8 text-sm text-gray-500">
+          <div className="mt-12 pt-8 border-t border-gray-300">
+            <div className="flex flex-wrap gap-8 text-sm text-gray-600">
               <div>
-                <span className="block text-2xl font-semibold text-foreground">20%</span>
+                <span className="block text-2xl font-semibold text-[#1A1A1A]">20%</span>
                 de commission uniquement
               </div>
               <div>
-                <span className="block text-2xl font-semibold text-foreground">5+</span>
+                <span className="block text-2xl font-semibold text-[#1A1A1A]">5+</span>
                 communes couvertes
               </div>
               <div>
-                <span className="block text-2xl font-semibold text-foreground">24/7</span>
+                <span className="block text-2xl font-semibold text-[#1A1A1A]">24/7</span>
                 support client
               </div>
             </div>

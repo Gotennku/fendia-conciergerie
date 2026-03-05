@@ -1,5 +1,7 @@
 import { Hero } from "@/components/organisms"
-import { Container, H2, Paragraph, Button } from "@/components/atoms"
+import { Container, H2, Paragraph } from "@/components/atoms"
+import { Button } from "@/components/ui/button"
+import { Phone } from "lucide-react"
 
 const services = [
   {
@@ -58,7 +60,7 @@ export default function Home() {
       <Hero />
 
       {/* Services Section */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-[#FAFAFA]">
         <Container>
           <div className="text-center mb-16">
             <H2 className="mb-4">Deux formules adaptées à vos besoins</H2>
@@ -74,17 +76,17 @@ export default function Home() {
                 key={index}
                 className="bg-white p-8 md:p-10 border border-gray-200 hover:border-gray-300 transition-colors"
               >
-                <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-[#1A1A1A]">{service.title}</h3>
                 <p className="text-gray-500 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3 text-gray-600">
-                      <span className="text-foreground mt-1">✓</span>
+                      <span className="text-[#1A1A1A] mt-1">✓</span>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" fullWidth>
+                <Button variant="secondary" fullWidth>
                   En savoir plus
                 </Button>
               </div>
@@ -94,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <Container>
           <div className="text-center mb-16">
             <H2 className="mb-4">Comment ça marche ?</H2>
@@ -128,7 +130,7 @@ export default function Home() {
                 <span className="inline-block text-5xl font-semibold text-gray-200 mb-4">
                   {item.step}
                 </span>
-                <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-[#1A1A1A]">{item.title}</h3>
                 <p className="text-gray-500">{item.description}</p>
               </div>
             ))}
@@ -137,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-[#FAFAFA]">
         <Container>
           <div className="text-center mb-16">
             <H2 className="mb-4">Ce que disent nos clients</H2>
@@ -154,12 +156,12 @@ export default function Home() {
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-foreground">★</span>
+                    <span key={i} className="text-[#1A1A1A]">★</span>
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.text}&rdquo;</p>
                 <div>
-                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="font-semibold text-[#1A1A1A]">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.location}</p>
                 </div>
               </div>
@@ -169,7 +171,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24">
+      <section className="py-24 bg-white">
         <Container size="md">
           <div className="text-center">
             <H2 className="mb-4">Prêt à maximiser vos revenus ?</H2>
@@ -178,8 +180,8 @@ export default function Home() {
               de vos revenus locatifs potentiels.
             </Paragraph>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">Estimer mes revenus</Button>
-              <Button variant="outline" size="lg">
+              <Button variant="primary" size="lg">Estimer mes revenus</Button>
+              <Button variant="secondary" size="lg" leftIcon={<Phone />} asChild>
                 <a href="tel:+33745105564">07 45 10 55 64</a>
               </Button>
             </div>

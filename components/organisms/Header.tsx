@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Container, Button } from '@/components/atoms'
+import { Container } from '@/components/atoms'
+import { Button } from '@/components/ui/button'
 
 const navigation = [
   { name: 'Accueil', href: '/' },
@@ -36,7 +37,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-600 hover:text-foreground transition-colors text-sm font-medium"
+                className="text-gray-600 hover:text-[#1A1A1A] transition-colors text-sm font-medium"
               >
                 {item.name}
               </Link>
@@ -45,7 +46,7 @@ export function Header() {
 
           {/* CTA */}
           <div className="hidden md:block">
-            <Button size="sm">Estimer mes revenus</Button>
+            <Button variant="primary" size="sm">Estimer mes revenus</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -56,9 +57,9 @@ export function Header() {
           >
             <span className="sr-only">Menu</span>
             <div className="w-6 h-5 flex flex-col justify-between">
-              <span className={`block h-0.5 bg-foreground transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span className={`block h-0.5 bg-foreground transition-opacity ${mobileMenuOpen ? 'opacity-0' : ''}`} />
-              <span className={`block h-0.5 bg-foreground transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span className={`block h-0.5 bg-[#1A1A1A] transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block h-0.5 bg-[#1A1A1A] transition-opacity ${mobileMenuOpen ? 'opacity-0' : ''}`} />
+              <span className={`block h-0.5 bg-[#1A1A1A] transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
             </div>
           </button>
         </nav>
@@ -71,13 +72,13 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-600 hover:text-foreground transition-colors py-2"
+                  className="text-gray-600 hover:text-[#1A1A1A] transition-colors py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <Button fullWidth className="mt-4">Estimer mes revenus</Button>
+              <Button variant="primary" fullWidth className="mt-4">Estimer mes revenus</Button>
             </div>
           </div>
         )}
