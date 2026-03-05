@@ -156,12 +156,22 @@ p {
 
 /* Liens */
 a {
-  color: var(--accent);
+  color: inherit;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
+  color: inherit;
+}
+
+/* Liens standalone (pas dans les boutons) */
+p a, li a, .prose a {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+p a:hover, li a:hover, .prose a:hover {
   color: var(--accent-hover);
 }
 
